@@ -1,0 +1,21 @@
+# Instructions
+
+1) Place your .c files in the studentSrc directory
+2) Place your header files in the studentIncludes directory
+3) type "make"
+
+to run:
+
+./bin/runTests
+
+to test for memory leaks:
+
+make memtest
+
+and look for 0 bytes in 0 blocks in the output.
+
+# Notes
+
+- This is not comprehensive testing.  You should write more thorough tests for your solutions.
+- This testing suite is not in any way indicative of your grade on this assignment.  We'll be using a different, more thorough test suite to grade the assignment
+- All functions must be implemented or at least stubbed to compile this suite.  If function definitions are missing, you'll be unable to compile the suite
