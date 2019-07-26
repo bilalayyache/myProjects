@@ -7,9 +7,6 @@ mainlineTestPart1 : mainlineTestPart1.o create2DArray.o set2DElement.o get2DElem
 mainlineTestPart2 : mainlineTestPart2.o createStringArray.o setStringArray.o getStringArray.o freeStringArray.o
 	$(CC) -o mainlineTestPart2 bin/mainlineTestPart2.o bin/createStringArray.o bin/setStringArray.o bin/getStringArray.o bin/freeStringArray.o
 
-mainlineTestPart1.o: studentSrc/mainlineTestPart1.c studentIncludes/arrayDefns.h studentIncludes/arrayVars.h
-	$(CC) $(CFLAGS) -c studentSrc/mainlineTestPart1.c -o bin/mainlineTestPart1.o
-
 mainlineTestPart2.o: studentSrc/mainlineTestPart2.c studentIncludes/arrayDefns.h studentIncludes/arrayVars.h
 	$(CC) $(CFLAGS) -c studentSrc/mainlineTestPart2.c -o bin/mainlineTestPart2.o
 
@@ -28,7 +25,7 @@ free2DArray.o:studentSrc/free2DArray.c studentIncludes/arrayDefns.h studentInclu
 createStringArray.o: studentSrc/createStringArray.c studentIncludes/arrayDefns.h studentIncludes/arrayVars.h
 	$(CC) $(CFLAGS) -c studentSrc/createStringArray.c -o bin/createStringArray.o
 
-setStringArray.0: studentSrc/setStringArray.c studentIncludes/arrayDefns.h studentIncludes/arrayVars.h
+setStringArray.o: studentSrc/setStringArray.c studentIncludes/arrayDefns.h studentIncludes/arrayVars.h
 	$(CC) $(CFLAGS) -c studentSrc/setStringArray.c -o bin/setStringArray.o
 
 getStringArray.o:studentSrc/getStringArray.c studentIncludes/arrayDefns.h studentIncludes/arrayVars.h
