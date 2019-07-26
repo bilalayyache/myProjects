@@ -9,14 +9,5 @@ void setStringArray ( char **array, int index, char * string );
 char *getStringArray ( char **array, int index );
 void freeStringArray ( char **array, int number );
 
-/*
-Part 2
-char **createStringArray ( int number );
-void setStringArray ( char **array, int index, char * string );
-char *getStringArray ( char **array, int index );
-void freeStringArray ( char **array, int number );
-
-Part 3 
 int **createArray ( int rows, int cols );
-void freeArray ( int **array, int rows, int cols)
-*/
+void freeArray ( int **array, int rows, int cols);
