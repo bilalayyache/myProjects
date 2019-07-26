@@ -42,6 +42,7 @@ int main (int argc, char ** argv)
     int sentenceCount = 0;
 
     bool wordFlag = true;
+    bool sentenceFlag = true;
     char letter;
 
     FILE * inFile = NULL;
@@ -58,17 +59,19 @@ int main (int argc, char ** argv)
                 wordCount++;
                 wordFlag = false;
                 
-            }else if(checkLetter(letter) == 2) /*This is a period*/
+            }else if(checkLetter(letter) == 2 && sentenceFlag == true) /*This is a period*/
             {
                 wordCount++;
                 sentenceCount++;
                 wordFlag = false;
+                sentenceFlag = false;
+                
             }else if(checkLetter(letter) == 3 || checkLetter(letter) == 4)
             {
                 letterCount++;
                 wordFlag = true;
+                sentenceFlag = true;
             }
-
         }
         fclose(inFile);
     }
