@@ -1,1 +1,0 @@
-int *create2DArray ( int rows, int cols );

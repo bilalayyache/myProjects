@@ -27,14 +27,23 @@ index = 206.835 – 84.6 * ( #syllables / #words )
 rounded to the nearest integer (use the round 
 function rather than ceiling or floor).
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <funcDef.h>
+#include <stdbool.h>
 
 
 int main (int argc, char ** argv)
 {
+    int letterCount = 0;
+    int wordCount = 0;
+    int sentenceCount = 0;
+
+    bool wordFlag = true;
+    char letter;
+
     FILE * inFile = NULL;
     inFile = fopen(argv[1], "r");
 
@@ -42,8 +51,31 @@ int main (int argc, char ** argv)
         printf("ERROR: Could not open file.\n");
     }else
     {
-        //CODE HERE
+        while((letter = getc(inFile)) != EOF)
+        {
+            printf("%c", letter);
+            if(checkLetter(letter) == 1 && wordFlag == true) /* his is a space*/
+            {
+                printf("1");
+                wordCount++;
+                wordFlag = false;
+                
+            }else if(checkLetter(letter) == 2) /*This is a period*/
+            {
+                printf("2");
+                wordCount++;
+                sentenceCount++;
+                wordFlag = false;
+            }else if(checkLetter(letter) == 3 || checkLetter(letter) == 4)
+            {
+                letterCount++;
+                wordFlag = true;
+            }
+
+        }
         fclose(inFile);
     }
+    printf("Number of words: %d\n", wordCount); /* Should be 26 */
+    printf("Number of Sentences: %d\n", sentenceCount); /* Should be 4 */
     return 0;
 }
