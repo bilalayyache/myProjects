@@ -53,16 +53,13 @@ int main (int argc, char ** argv)
     {
         while((letter = getc(inFile)) != EOF)
         {
-            printf("%c", letter);
             if(checkLetter(letter) == 1 && wordFlag == true) /* his is a space*/
             {
-                printf("1");
                 wordCount++;
                 wordFlag = false;
                 
             }else if(checkLetter(letter) == 2) /*This is a period*/
             {
-                printf("2");
                 wordCount++;
                 sentenceCount++;
                 wordFlag = false;

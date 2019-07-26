@@ -10,7 +10,7 @@ int checkLetter(char strpointer)
     {
         return 1; /* Space */
     }
-    else if(strpointer == '.' || strpointer == '!' || strpointer == '?' )
+    else if(strpointer == '.' || strpointer == '!' || strpointer == '?' || strpointer == ';')
     {
 
         return 2; /* Stopper */
