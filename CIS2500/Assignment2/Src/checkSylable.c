@@ -5,8 +5,13 @@ sentence termination characters: period,colon,
  All other punctuation such as
 commas, #, @, etc. are to be ignored 
  */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <funcDef.h>
+#include <stdbool.h>
 
-int isEnd (char strpointer)
+int checkSylable(bool flag)
 {
     return 0;
 }
