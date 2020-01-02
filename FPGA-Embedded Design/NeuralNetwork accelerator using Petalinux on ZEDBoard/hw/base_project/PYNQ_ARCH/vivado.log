@@ -1,0 +1,63 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec 31 21:33:38 2019
+# Process ID: 14516
+# Current directory: C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16008 C:\Users\bilal\Desktop\School\Projects\FPGAHardware\PYNQ-Classification-master\hw\base_project\PYNQ_ARCH\PYNQ_ARCH.xpr
+# Log file: C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/vivado.log
+# Journal file: C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/ISE_Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 822.074 ; gain = 206.297
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd}
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_1
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - axis_switch_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s00_mmu
+Adding component instance block -- Xilinx:hls:simple_sum:1.0 - simple_sum_0
+Adding component instance block -- Xilinx:hls:stream_mult:1.0 - stream_mult_0
+Adding component instance block -- Xilinx:hls:mult_constant:1.0 - mult_constant_0
+Adding component instance block -- xilinx.com:hls:cifar_10:1.0 - cifar_10_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - ps7
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_100M
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_1/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_1/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_1/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_1/Data_S2MM>
+Successfully read diagram <base> from BD file <C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd>
+open_bd_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 946.039 ; gain = 68.512
+validate_bd_design -force
+CRITICAL WARNING: [BD 41-1356] Slave segment </mult_constant_0/s_axi_AXILiteS/Reg> is not mapped into </ps7/Data>. Please use Address Editor to either map or exclude it.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/ps7' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_ACP_FREQMHZ(10) on '/ps7' with propagated value(100). Command ignored
+WARNING: [BD 41-1629] Slave segment </ps7/S_AXI_ACP/ACP_IOP> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </ps7/S_AXI_ACP/ACP_M_AXI_GP0> is excluded from all addressing paths.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps7/S_AXI_ACP(5) and /axi_mem_intercon/m00_couplers/auto_pc/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps7/S_AXI_ACP(5) and /axi_mem_intercon/m00_couplers/auto_pc/M_AXI(0)
+validate_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1021.102 ; gain = 69.902

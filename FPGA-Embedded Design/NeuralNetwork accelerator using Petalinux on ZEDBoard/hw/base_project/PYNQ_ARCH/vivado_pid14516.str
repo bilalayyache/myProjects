@@ -1,0 +1,256 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 14516
+License: Customer
+
+Current time: 	Tue Dec 31 21:34:14 EST 2019
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 1,441 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/ISE_Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/ISE_Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	bilal
+User home directory: C:/Users/bilal
+User working directory: C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: C:/ISE_Xilinx/Vivado
+HDI_APPROOT: C:/ISE_Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/ISE_Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/ISE_Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/ISE_Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/vivado.log
+Vivado journal file location: 	C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/vivado.jou
+Engine tmp dir: 	C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/.Xil/Vivado-14516-LAPTOP-MJ24TG1R
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/ISE_Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/ISE_Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/ISE_Xilinx/Vivado/2019.1
+XILINX_SDK: C:/ISE_Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/ISE_Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/ISE_Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 589 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// WARNING: HEventQueue.dispatchEvent() is taking  1519 ms.
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\bilal\Desktop\School\Projects\FPGAHardware\PYNQ-Classification-master\hw\base_project\PYNQ_ARCH\PYNQ_ARCH.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH' 
+// HMemoryUtils.trashcanNow. Engine heap size: 593 MB. GUI used memory: 44 MB. Current time: 12/31/19, 9:34:16 PM EST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 746 MB. GUI used memory: 43 MB. Current time: 12/31/19, 9:34:46 PM EST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 52 MB (+52394kb) [00:01:03]
+// [Engine Memory]: 793 MB (+679987kb) [00:01:03]
+// [GUI Memory]: 67 MB (+12768kb) [00:01:03]
+// [GUI Memory]: 91 MB (+21621kb) [00:01:04]
+// [GUI Memory]: 96 MB (+435kb) [00:01:04]
+// [GUI Memory]: 103 MB (+2272kb) [00:01:05]
+// WARNING: HEventQueue.dispatchEvent() is taking  5536 ms.
+// Tcl Message: open_project C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw'. 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/ISE_Xilinx/Vivado/2019.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 822.074 ; gain = 206.297 
+// Project name: PYNQ_ARCH; location: C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH; part: xc7z020clg484-1
+dismissDialog("Open Project"); // by (cl)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1411 ms. Increasing delay to 4233 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 828 MB. GUI used memory: 51 MB. Current time: 12/31/19, 9:35:06 PM EST
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 837 MB (+4673kb) [00:01:16]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// by (cl):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// HMemoryUtils.trashcanNow. Engine heap size: 890 MB. GUI used memory: 52 MB. Current time: 12/31/19, 9:35:21 PM EST
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 925 MB (+47923kb) [00:01:32]
+// [GUI Memory]: 109 MB (+191kb) [00:01:36]
+// WARNING: HEventQueue.dispatchEvent() is taking  4529 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+// Elapsed time: 19 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 946.039 ; gain = 68.512 
+// 'bB' command handler elapsed time: 19 seconds
+dismissDialog("Open Block Design"); // by (cl)
+// [GUI Memory]: 119 MB (+4945kb) [00:01:38]
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_SELECT_AREA, "System_select_area"); // u (f, cl): TRUE
+// Run Command: PAResourceCommand.PACommandNames_SELECT_AREA
+// PAPropertyPanels.initPanels (cifar_10_0_out_stream) elapsed time: 0.2s
+// Elapsed time: 26 seconds
+selectButton(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "System_validate_bd_design_rsb"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
+// Tcl Command: 'validate_bd_design -force'
+selectButton("OptionPane.button", "Rerun Validate Design"); // JButton (A, G)
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SCRIPT_TASK
+// by (cl):  Validate Design : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: validate_bd_design -force 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 960 MB. GUI used memory: 58 MB. Current time: 12/31/19, 9:36:16 PM EST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 996 MB (+26583kb) [00:02:30]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PARAM_PROP
+// Tcl Message: validate_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1021.102 ; gain = 69.902 
+// dN (cl): Critical Messages: addNotify
+// Elapsed time: 15 seconds
+dismissDialog("Validate Design"); // by (cl)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (dN)
+dismissDialog("Critical Messages"); // dN (cl)
+// Elapsed time: 12 seconds
+collapseTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[base, Interface Connections]", 2); // i (O, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,026 MB. GUI used memory: 59 MB. Current time: 12/31/19, 9:36:56 PM EST
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cl) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+// WARNING: HEventQueue.dispatchEvent() is taking  2390 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,026 MB. GUI used memory: 60 MB. Current time: 1/1/20, 3:19:31 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,026 MB. GUI used memory: 53 MB. Current time: 1/1/20, 3:49:32 AM EST
+// WARNING: HEventQueue.dispatchEvent() is taking  10797188 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,026 MB. GUI used memory: 53 MB. Current time: 1/1/20, 7:14:23 AM EST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 10800115 ms. Increasing delay to 32400345 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  59990417 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,026 MB. GUI used memory: 53 MB. Current time: 1/1/20, 11:54:31 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,026 MB. GUI used memory: 53 MB. Current time: 1/2/20, 12:24:31 AM EST

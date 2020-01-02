@@ -1,0 +1,626 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Dec 27 20:44:50 2019
+# Process ID: 10600
+# Current directory: C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project
+# Command line: vivado.exe -source pynq_arch.tcl
+# Log file: C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/vivado.log
+# Journal file: C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source pynq_arch.tcl
+# set origin_dir "."
+# if { [info exists ::origin_dir_loc] } {
+#   set origin_dir $::origin_dir_loc
+# }
+# variable script_file
+# set script_file "pynq_arch.tcl"
+# proc help {} {
+#   variable script_file
+#   puts "\nDescription:"
+#   puts "Recreate a Vivado project from this script. The created project will be"
+#   puts "functionally equivalent to the original project for which this script was"
+#   puts "generated. The script contains commands for creating a project, filesets,"
+#   puts "runs, adding/importing sources and setting properties on various objects.\n"
+#   puts "Syntax:"
+#   puts "$script_file"
+#   puts "$script_file -tclargs \[--origin_dir <path>\]"
+#   puts "$script_file -tclargs \[--help\]\n"
+#   puts "Usage:"
+#   puts "Name                   Description"
+#   puts "-------------------------------------------------------------------------"
+#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
+#   puts "                       origin_dir path value is \".\", otherwise, the value"
+#   puts "                       that was set with the \"-paths_relative_to\" switch"
+#   puts "                       when this script was generated.\n"
+#   puts "\[--help\]               Print help information for this script"
+#   puts "-------------------------------------------------------------------------\n"
+#   exit 0
+# }
+# if { $::argc > 0 } {
+#   for {set i 0} {$i < [llength $::argc]} {incr i} {
+#     set option [string trim [lindex $::argv $i]]
+#     switch -regexp -- $option {
+#       "--origin_dir" { incr i; set origin_dir [lindex $::argv $i] }
+#       "--help"       { help }
+#       default {
+#         if { [regexp {^-} $option] } {
+#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
+#           return 1
+#         }
+#       }
+#     }
+#   }
+# }
+# set orig_proj_dir "[file normalize "$origin_dir/../PYNQ_ARCH/PYNQ_ARCH"]"
+# create_project PYNQ_ARCH ./PYNQ_ARCH -part xc7z020clg400-1
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/ISE_Xilinx/Vivado/2019.1/data/ip'.
+create_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 783.645 ; gain = 210.695
+# set proj_dir [get_property directory [current_project]]
+# set obj [get_projects PYNQ_ARCH]
+# set_property "board_part" "digilentinc.com:arty-z7-20:part0:1.0" $obj
+# set_property "default_lib" "xil_defaultlib" $obj
+# set_property "sim.ip.auto_export_scripts" "1" $obj
+# set_property "simulator_language" "Mixed" $obj
+# set_property "xpm_libraries" "XPM_CDC XPM_MEMORY" $obj
+# if {[string equal [get_filesets -quiet sources_1] ""]} {
+#   create_fileset -srcset sources_1
+# }
+# set obj [get_filesets sources_1]
+# set_property "ip_repo_paths" "[file normalize "$origin_dir/../"]" $obj
+# update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH'.)
+# set obj [get_filesets sources_1]
+# set files [list \
+#  "[file normalize "$origin_dir/base/base.bd"]"\
+#  "[file normalize "$origin_dir/base/base_wrapper.v"]"\
+# ]
+# add_files -norecurse -fileset $obj $files
+# set file "$origin_dir/base/base.bd"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# if { ![get_property "is_locked" $file_obj] } {
+#   set_property "generate_synth_checkpoint" "0" $file_obj
+# }
+# set obj [get_filesets sources_1]
+# set_property "top" "base_wrapper" $obj
+# if {[string equal [get_filesets -quiet constrs_1] ""]} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets constrs_1]
+# set file "[file normalize "$origin_dir/top.xdc"]"
+# set file_added [add_files -norecurse -fileset $obj $file]
+# set file "$origin_dir/top.xdc"
+# set file [file normalize $file]
+# set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+# set_property "file_type" "XDC" $file_obj
+# set obj [get_filesets constrs_1]
+# if {[string equal [get_filesets -quiet sim_1] ""]} {
+#   create_fileset -simset sim_1
+# }
+# set obj [get_filesets sim_1]
+# set obj [get_filesets sim_1]
+# set_property "top" "base_wrapper" $obj
+# set_property "transport_int_delay" "0" $obj
+# set_property "transport_path_delay" "0" $obj
+# set_property "xelab.nosort" "1" $obj
+# set_property "xelab.unifast" "" $obj
+# if {[string equal [get_runs -quiet synth_1] ""]} {
+#   create_run -name synth_1 -part xc7z020clg400-1 -flow {Vivado Synthesis 2016} -strategy "Vivado Synthesis Defaults" -constrset constrs_1
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2016" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# current_run -synthesis [get_runs synth_1]
+# if {[string equal [get_runs -quiet impl_1] ""]} {
+#   create_run -name impl_1 -part xc7z020clg400-1 -flow {Vivado Implementation 2016} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+#   set_property flow "Vivado Implementation 2016" [get_runs impl_1]
+# }
+# set obj [get_runs impl_1]
+# set_property "steps.write_bitstream.args.readback_file" "0" $obj
+# set_property "steps.write_bitstream.args.verbose" "0" $obj
+# current_run -implementation [get_runs impl_1]
+# puts "INFO: Project created:PYNQ_ARCH"
+INFO: Project created:PYNQ_ARCH
+update_compile_order -fileset sources_1
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/genesys2/H/1.1/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/sword/C.0/1.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/3.0/3.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/4.0/4.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/3.0/3.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/4.0/4.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/3.0/3.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/2.0/2.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/4.0/4.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/3.0/3.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/4.0/4.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:teb0911_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEB0911_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:tec0850_15eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEC0850_15EG_1E/1.0/1.0/board.xml as part xczu15eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au200:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au200/1.2/1.2/board.xml as part xcu200-fsgd2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au250:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au250/1.2/1.2/board.xml as part xcu250-figd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/production/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.1/1.1/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au50dd:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au50/es/1.0/1.0/board.xml as part xcu50-fsvh2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu118/2.0/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.0/1.0/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.1/1.1/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/production/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/es/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/genesys2/H/1.1/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/sword/C.0/1.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/3.0/3.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/4.0/4.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/3.0/3.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/4.0/4.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/3.0/3.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/2.0/2.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/4.0/4.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/3.0/3.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/4.0/4.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:teb0911_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEB0911_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:tec0850_15eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEC0850_15EG_1E/1.0/1.0/board.xml as part xczu15eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au200:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au200/1.2/1.2/board.xml as part xcu200-fsgd2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au250:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au250/1.2/1.2/board.xml as part xcu250-figd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/production/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.1/1.1/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au50dd:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au50/es/1.0/1.0/board.xml as part xcu50-fsvh2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu118/2.0/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.0/1.0/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.1/1.1/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/production/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/es/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/genesys2/H/1.1/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/sword/C.0/1.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/3.0/3.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/4.0/4.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/3.0/3.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/4.0/4.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/3.0/3.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/2.0/2.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/4.0/4.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/3.0/3.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/4.0/4.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:teb0911_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEB0911_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:tec0850_15eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEC0850_15EG_1E/1.0/1.0/board.xml as part xczu15eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au200:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au200/1.2/1.2/board.xml as part xcu200-fsgd2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au250:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au250/1.2/1.2/board.xml as part xcu250-figd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/production/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.1/1.1/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au50dd:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au50/es/1.0/1.0/board.xml as part xcu50-fsvh2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu118/2.0/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.0/1.0/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.1/1.1/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/production/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/es/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/genesys2/H/1.1/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/sword/C.0/1.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/3.0/3.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/4.0/4.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/3.0/3.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/4.0/4.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/3.0/3.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/2.0/2.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/4.0/4.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/3.0/3.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/4.0/4.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:teb0911_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEB0911_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:tec0850_15eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEC0850_15EG_1E/1.0/1.0/board.xml as part xczu15eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au200:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au200/1.2/1.2/board.xml as part xcu200-fsgd2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au250:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au250/1.2/1.2/board.xml as part xcu250-figd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/production/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.1/1.1/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au50dd:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au50/es/1.0/1.0/board.xml as part xcu50-fsvh2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu118/2.0/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.0/1.0/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.1/1.1/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/production/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/es/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e-es1 specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+set_property board_part digilentinc.com:zedboard:part0:1.0 [current_project]
+WARNING: [Project 1-153] The current project device 'xc7z020clg400-1' does not match with the device on the 'DIGILENTINC.COM:ZEDBOARD:PART0:1.0' board part. A device change to match the device on 'DIGILENTINC.COM:ZEDBOARD:PART0:1.0' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+INFO: [Project 1-152] Project part set to zynq (xc7z020clg484-1)
+open_bd_design {C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd}
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_axi_dma_0_0 
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_1
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_axi_dma_1_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_axi_mem_intercon_0 
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - axis_switch_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_axis_switch_0_0 
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - ps7
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_ps7_0 
+INFO: [PS7-6] Configuring Board Preset part0. Please wait ......
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_ps7_axi_periph_0 
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_100M
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_rst_ps7_100M_0 
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Adding component instance block -- Xilinx:hls:simple_sum:1.0 - simple_sum_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_simple_sum_0_1 
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+Adding component instance block -- Xilinx:hls:stream_mult:1.0 - stream_mult_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_stream_mult_0_1 
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+Adding component instance block -- Xilinx:hls:mult_constant:1.0 - mult_constant_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_mult_constant_0_1 
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+Adding component instance block -- xilinx.com:hls:cifar_10:1.0 - cifar_10_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_cifar_10_0_0 
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_xbar_1 
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s00_mmu
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_s00_mmu_0 
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_auto_pc_1 
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_auto_us_3 
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_auto_us_2 
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_1/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_1/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_1/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_1/Data_S2MM>
+Successfully read diagram <base> from BD file <C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd>
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+Wrote  : <C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/ui/bd_520828f1.ui> 
+open_bd_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1171.063 ; gain = 236.191
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/genesys2/H/1.1/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/sword/C.0/1.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/3.0/3.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/4.0/4.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/3.0/3.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/4.0/4.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/3.0/3.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/2.0/2.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/4.0/4.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/3.0/3.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/4.0/4.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:teb0911_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEB0911_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:tec0850_15eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEC0850_15EG_1E/1.0/1.0/board.xml as part xczu15eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au200:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au200/1.2/1.2/board.xml as part xcu200-fsgd2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au250:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au250/1.2/1.2/board.xml as part xcu250-figd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/production/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.1/1.1/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au50dd:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au50/es/1.0/1.0/board.xml as part xcu50-fsvh2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu118/2.0/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.0/1.0/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.1/1.1/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/production/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/es/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/genesys2/H/1.1/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/sword/C.0/1.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/3.0/3.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/4.0/4.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/3.0/3.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/4.0/4.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/3.0/3.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/2.0/2.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/4.0/4.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/3.0/3.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/4.0/4.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:teb0911_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEB0911_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:tec0850_15eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEC0850_15EG_1E/1.0/1.0/board.xml as part xczu15eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au200:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au200/1.2/1.2/board.xml as part xcu200-fsgd2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au250:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au250/1.2/1.2/board.xml as part xcu250-figd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/production/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.1/1.1/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au50dd:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au50/es/1.0/1.0/board.xml as part xcu50-fsvh2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu118/2.0/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.0/1.0/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.1/1.1/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/production/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/es/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/genesys2/H/1.1/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/sword/C.0/1.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/3.0/3.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/4.0/4.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/3.0/3.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/4.0/4.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/3.0/3.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/2.0/2.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/4.0/4.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/3.0/3.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/4.0/4.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:teb0911_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEB0911_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:tec0850_15eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEC0850_15EG_1E/1.0/1.0/board.xml as part xczu15eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au200:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au200/1.2/1.2/board.xml as part xcu200-fsgd2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au250:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au250/1.2/1.2/board.xml as part xcu250-figd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/production/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.1/1.1/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au50dd:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au50/es/1.0/1.0/board.xml as part xcu50-fsvh2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu118/2.0/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.0/1.0/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.1/1.1/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/production/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/es/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/genesys2/H/1.1/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Digilent/sword/C.0/1.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/3.0/3.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_15eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_15EG_1E/4.0/4.0/board.xml as part xczu15eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/3.0/3.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_6eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_6EG_1E/4.0/4.0/board.xml as part xczu6eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/3.0/3.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/2.0/2.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_1e_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_1E/4.0/4.0/board.xml as part xczu9eg-ffvc900-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i:part0:3.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/3.0/3.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:te0808_9eg_2i_tebf0808:part0:4.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TE0808_9EG_2I/4.0/4.0/board.xml as part xczu9eg-ffvc900-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:teb0911_9eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEB0911_9EG_1E/1.0/1.0/board.xml as part xczu9eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part trenz.biz:tec0850_15eg_1e:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Trenz_Electronic/TEC0850_15EG_1E/1.0/1.0/board.xml as part xczu15eg-ffvb1156-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au200:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au200/1.2/1.2/board.xml as part xcu200-fsgd2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au250:part0:1.2 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au250/1.2/1.2/board.xml as part xcu250-figd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/production/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.0/1.0/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au280/es1/1.1/1.1/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au50dd:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/au50/es/1.0/1.0/board.xml as part xcu50-fsvh2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu118/2.0/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.0/1.0/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128_es:part0:1.1 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu128/1.1/1.1/board.xml as part xcvu37p-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/production/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129_es:part0:1.0 available at C:/Users/bilal/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store/XilinxBoardStore/Vivado/2019.1/boards/Xilinx/vcu129/es/1.0/1.0/board.xml as part xcvu29p-fsga2577-2l-e-es1 specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
+WARNING: [Project 1-153] The current project device 'xc7z020clg484-1' does not match with the device on the 'DIGILENTINC.COM:ARTY-Z7-20:PART0:1.0' board part. A device change to match the device on 'DIGILENTINC.COM:ARTY-Z7-20:PART0:1.0' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+INFO: [Project 1-152] Project part set to zynq (xc7z020clg400-1)
+open_bd_design {C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd}
+report_ip_status -name ip_status 
+close_bd_design [get_bd_designs base]
+set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
+WARNING: [Project 1-153] The current project device 'xc7z020clg400-1' does not match with the device on the 'EM.AVNET.COM:ZED:PART0:1.4' board part. A device change to match the device on 'EM.AVNET.COM:ZED:PART0:1.4' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+INFO: [Project 1-152] Project part set to zynq (xc7z020clg484-1)
+reset_property board_connections [get_projects PYNQ_ARCH]
+open_bd_design {C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd}
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_1
+Adding component instance block -- xilinx.com:ip:axis_switch:1.1 - axis_switch_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - ps7
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_100M
+Adding component instance block -- Xilinx:hls:simple_sum:1.0 - simple_sum_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_simple_sum_0_1 
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /simple_sum_0/out_data. Setting parameter on /simple_sum_0/out_data failed
+Adding component instance block -- Xilinx:hls:stream_mult:1.0 - stream_mult_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_stream_mult_0_1 
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /stream_mult_0/out_data. Setting parameter on /stream_mult_0/out_data failed
+Adding component instance block -- Xilinx:hls:mult_constant:1.0 - mult_constant_0
+INFO: [BD 41-434] Could not find an IP with XCI file by name: base_mult_constant_0_1 
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+WARNING: [BD 41-1282] Ignoring parameter SIGNAL_SET
+WARNING: [BD 41-1281] Parameter SIGNAL_SET is not defined on /mult_constant_0/out_data. Setting parameter on /mult_constant_0/out_data failed
+Adding component instance block -- xilinx.com:hls:cifar_10:1.0 - cifar_10_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s00_mmu
+CRITICAL WARNING: [BD 41-5] xbar does not have a bus interface called M01_AXI
+CRITICAL WARNING: [BD 41-5] xbar does not have a bus interface called M02_AXI
+CRITICAL WARNING: [BD 41-5] xbar does not have a bus interface called M03_AXI
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+CRITICAL WARNING: [BD 41-5] xbar does not have a bus interface called S01_AXI
+CRITICAL WARNING: [BD 41-5] xbar does not have a bus interface called S02_AXI
+CRITICAL WARNING: [BD 41-5] xbar does not have a bus interface called S03_AXI
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_1/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_1/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_1/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_1/Data_S2MM>
+Successfully read diagram <base> from BD file <C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd>
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1281.652 ; gain = 0.000
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {base_ps7_0 base_rst_ps7_100M_0}] -log ip_upgrade.log
+Upgrading 'C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd'
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [PS7-6] Configuring Board Preset part0. Please wait ......
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [IP_Flow 19-3420] Updated base_ps7_0 to use current project options
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_0/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_1/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_IOP> from </axi_dma_1/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_0/Data_S2MM>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_1/Data_MM2S>
+Excluding </ps7/S_AXI_ACP/ACP_M_AXI_GP0> from </axi_dma_1/Data_S2MM>
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [IP_Flow 19-3420] Updated base_rst_ps7_100M_0 to use current project options
+Wrote  : <C:\Users\bilal\Desktop\School\Projects\FPGAHardware\PYNQ-Classification-master\hw\base_project\base\base.bd> 
+INFO: [BD 41-2124] The block design file <C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd> has changed from an XML format to a JSON format. All flows are expected to work as in prior versions of Vivado. Please contact your Xilinx Support representative, in case of any issues.
+Wrote  : <C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/ui/bd_520828f1.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1281.652 ; gain = 0.000
+export_ip_user_files -of_objects [get_ips {base_ps7_0 base_rst_ps7_100M_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd]
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/ps7' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_ACP_FREQMHZ(10) on '/ps7' with propagated value(100). Command ignored
+WARNING: [BD 41-1629] Slave segment </ps7/S_AXI_ACP/ACP_IOP> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </ps7/S_AXI_ACP/ACP_M_AXI_GP0> is excluded from all addressing paths.
+CRITICAL WARNING: [BD 41-1356] Slave segment </mult_constant_0/s_axi_AXILiteS/Reg> is not mapped into </ps7/Data>. Please use Address Editor to either map or exclude it.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps7/S_AXI_ACP(5) and /axi_mem_intercon/m00_couplers/auto_pc/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps7/S_AXI_ACP(5) and /axi_mem_intercon/m00_couplers/auto_pc/M_AXI(0)
+Wrote  : <C:\Users\bilal\Desktop\School\Projects\FPGAHardware\PYNQ-Classification-master\hw\base_project\base\base.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to net 'auto_pc_to_m00_couplers_BID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to net 'auto_pc_to_m00_couplers_RID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/ps7/S_AXI_ACP_WID'(3) to net 'axi_mem_intercon_M00_AXI_WID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/ps7/S_AXI_ACP_ARID'(3) to net 'axi_mem_intercon_M00_AXI_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/ps7/S_AXI_ACP_AWID'(3) to net 'axi_mem_intercon_M00_AXI_AWID'(2) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/synth/base.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(2) to net 'auto_pc_to_m00_couplers_BID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(2) to net 'auto_pc_to_m00_couplers_RID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/ps7/S_AXI_ACP_WID'(3) to net 'axi_mem_intercon_M00_AXI_WID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/ps7/S_AXI_ACP_ARID'(3) to net 'axi_mem_intercon_M00_AXI_ARID'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/ps7/S_AXI_ACP_AWID'(3) to net 'axi_mem_intercon_M00_AXI_AWID'(2) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/sim/base.v
+VHDL Output written to : C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/hdl/base_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_switch_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block cifar_10_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block simple_sum_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block stream_mult_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mult_constant_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/ip/base_auto_us_0/base_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/ip/base_auto_us_1/base_auto_us_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/ip/base_auto_us_2/base_auto_us_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/ip/base_auto_us_3/base_auto_us_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s03_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/ip/base_auto_pc_0/base_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/ip/base_auto_pc_1/base_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_axi_periph/s00_mmu .
+Exporting to file C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/hw_handoff/base.hwh
+Generated Block Design Tcl file C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/hw_handoff/base_bd.tcl
+Generated Hardware Definition File C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/synth/base.hwdef
+generate_target: Time (s): cpu = 00:00:55 ; elapsed = 00:01:07 . Memory (MB): peak = 1407.219 ; gain = 125.566
+export_ip_user_files -of_objects [get_files C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/base/base.bd] -directory C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.ip_user_files -ipstatic_source_dir C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.cache/compile_simlib/modelsim} {questa=C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.cache/compile_simlib/questa} {riviera=C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.cache/compile_simlib/riviera} {activehdl=C:/Users/bilal/Desktop/School/Projects/FPGAHardware/PYNQ-Classification-master/hw/base_project/PYNQ_ARCH/PYNQ_ARCH.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 31 11:28:39 2019...
