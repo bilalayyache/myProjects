@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../HDLcode/Decryptor/aes_inv_cipher_top.v" \
+"../../../../../HDLcode/Decryptor/aes_inv_sbox.v" \
+"../../../../../HDLcode/Decryptor/aes_key_expand_128.v" \
+"../../../../../HDLcode/Decryptor/aes_rcon.v" \
+"../../../../../HDLcode/Decryptor/aes_sbox.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

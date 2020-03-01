@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../HDLcode/Encryptor/aes_fsmd.vhd" \
+"../../../../../HDLcode/Encryptor/aes_stage.vhd" \
+"../../../../../HDLcode/Encryptor/aes_stage_last.vhd" \
+"../../../../../HDLcode/Encryptor/key_schedule.vhd" \
+"../../../../../HDLcode/Encryptor/pipe_reg.vhd" \
+"../../../../../HDLcode/Encryptor/sbox.vhd" \
+"../../../../../HDLcode/Encryptor/shift_mix.vhd" \
+"../../../../../HDLcode/Encryptor/shift_row.vhd" \
+"../../../../../HDLcode/Encryptor/aes_accelerator.vhd" \
+
+# Do not sort compile order
+nosort
