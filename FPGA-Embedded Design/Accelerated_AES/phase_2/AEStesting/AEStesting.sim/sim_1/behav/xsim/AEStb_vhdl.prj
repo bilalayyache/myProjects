@@ -1,0 +1,37 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../HDLcode/Encryptor/aes_fsmd.vhd" \
+"../../../../../HDLcode/Decryptor/inv_aes_fsmd.vhd" \
+"../../../../../HDLcode/Decryptor/add.vhd" \
+"../../../../../HDLcode/Decryptor/addroundkey.vhd" \
+"../../../../../HDLcode/Encryptor/aes_stage.vhd" \
+"../../../../../HDLcode/Encryptor/aes_stage_last.vhd" \
+"../../../../../HDLcode/Decryptor/affine.vhd" \
+"../../../../../HDLcode/Decryptor/comp.vhd" \
+"../../../../../HDLcode/Decryptor/con2.vhd" \
+"../../../../../HDLcode/Decryptor/inv.vhd" \
+"../../../../../HDLcode/Decryptor/inv_aes_stage.vhd" \
+"../../../../../HDLcode/Decryptor/inv_aes_stage_last.vhd" \
+"../../../../../HDLcode/Decryptor/inv_affine.vhd" \
+"../../../../../HDLcode/Decryptor/inv_mix.vhd" \
+"../../../../../HDLcode/Decryptor/inv_mixcolumns.vhd" \
+"../../../../../HDLcode/Decryptor/inv_sbox.vhd" \
+"../../../../../HDLcode/Decryptor/inv_shiftrows.vhd" \
+"../../../../../HDLcode/Decryptor/inv_subbytes.vhd" \
+"../../../../../HDLcode/Decryptor/invcomp.vhd" \
+"../../../../../HDLcode/Encryptor/key_schedule.vhd" \
+"../../../../../HDLcode/Decryptor/keyexpansion.vhd" \
+"../../../../../HDLcode/Decryptor/mul.vhd" \
+"../../../../../HDLcode/Decryptor/mul2.vhd" \
+"../../../../../HDLcode/Decryptor/mul_2.vhd" \
+"../../../../../HDLcode/Decryptor/pipe_reg.vhd" \
+"../../../../../HDLcode/Decryptor/roundkeys.vhd" \
+"../../../../../HDLcode/Encryptor/sbox.vhd" \
+"../../../../../HDLcode/Decryptor/sbox0.vhd" \
+"../../../../../HDLcode/Encryptor/shift_mix.vhd" \
+"../../../../../HDLcode/Encryptor/shift_row.vhd" \
+"../../../../../HDLcode/Decryptor/square.vhd" \
+"../../../../../HDLcode/AEStb.vhd" \
+
+# Do not sort compile order
+nosort

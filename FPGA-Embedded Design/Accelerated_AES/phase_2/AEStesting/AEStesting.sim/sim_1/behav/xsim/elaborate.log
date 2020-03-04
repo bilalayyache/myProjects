@@ -1,0 +1,46 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/ISE_Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto fb63ba7dc9c14f489e6ed182b304a55b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot AEStb_behav xil_defaultlib.AEStb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture canright of entity xil_defaultlib.sbox [sbox_default]
+Compiling architecture behav of entity xil_defaultlib.shift_row [shift_row_default]
+Compiling architecture behav of entity xil_defaultlib.aes_stage_last [aes_stage_last_default]
+Compiling architecture behav of entity xil_defaultlib.shift_mix [shift_mix_default]
+Compiling architecture behav of entity xil_defaultlib.aes_stage [aes_stage_default]
+Compiling architecture beh of entity xil_defaultlib.key_schedule [key_schedule_default]
+Compiling architecture bhv of entity xil_defaultlib.pipe_reg [pipe_reg_default]
+Compiling architecture fsmd of entity xil_defaultlib.aes_fsmd [aes_fsmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.comp [comp_default]
+Compiling architecture behavioral of entity xil_defaultlib.add [add_default]
+Compiling architecture behavioral of entity xil_defaultlib.mul2 [mul2_default]
+Compiling architecture behavioral of entity xil_defaultlib.con2 [con2_default]
+Compiling architecture behavioral of entity xil_defaultlib.mul [mul_default]
+Compiling architecture behavioral of entity xil_defaultlib.square [square_default]
+Compiling architecture behavioral of entity xil_defaultlib.inv [inv_default]
+Compiling architecture behavioral of entity xil_defaultlib.invcomp [invcomp_default]
+Compiling architecture behavioral of entity xil_defaultlib.affine [affine_default]
+Compiling architecture behavioral of entity xil_defaultlib.sbox0 [sbox0_default]
+Compiling architecture behavioral of entity xil_defaultlib.keyexpansion [keyexpansion_default]
+Compiling architecture behavioral of entity xil_defaultlib.roundkeys [roundkeys_default]
+Compiling architecture behavioral of entity xil_defaultlib.inv_shiftrows [inv_shiftrows_default]
+Compiling architecture behavioral of entity xil_defaultlib.inv_affine [inv_affine_default]
+Compiling architecture behavioral of entity xil_defaultlib.inv_sbox [inv_sbox_default]
+Compiling architecture behavioral of entity xil_defaultlib.inv_subbytes [inv_subbytes_default]
+Compiling architecture behavioral of entity xil_defaultlib.addroundkey [addroundkey_default]
+Compiling architecture behavioral of entity xil_defaultlib.inv_aes_stage_last [inv_aes_stage_last_default]
+Compiling architecture behavioral of entity xil_defaultlib.mul_2 [mul_2_default]
+Compiling architecture behavioral of entity xil_defaultlib.inv_mix [inv_mix_default]
+Compiling architecture behavioral of entity xil_defaultlib.inv_mixcolumns [inv_mixcolumns_default]
+Compiling architecture behavioral of entity xil_defaultlib.inv_aes_stage [inv_aes_stage_default]
+Compiling architecture fsmd of entity xil_defaultlib.inv_aes_fsmd [inv_aes_fsmd_default]
+Compiling architecture arch1 of entity xil_defaultlib.aestb
+Built simulation snapshot AEStb_behav
