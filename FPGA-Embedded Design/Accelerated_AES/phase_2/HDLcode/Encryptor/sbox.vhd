@@ -1,46 +1,7 @@
--------------------------------------------------------------------------------
---! @file       sbox.vhd
---! @brief      AES Canright S-box
---! @project    VLSI Book - AES-128 Example
---! @author     Michael Muehlberghuber (mbgh@iis.ee.ethz.ch)
---! @company    Integrated Systems Laboratory, ETH Zurich
---! @copyright  Copyright (C) 2014 Integrated Systems Laboratory, ETH Zurich
---! @date       2014-06-05
---! @updated    2014-10-21
---! @platform   Simulation: ModelSim; Synthesis: Synopsys
---! @standard   VHDL'93/02
--------------------------------------------------------------------------------
--- Revision Control System Information:
--- File ID      :  $Id: sboxCan.vhd 30 2014-10-21 11:17:34Z u59323933 $
--- Revision     :  $Revision: 30 $
--- Local Date   :  $Date: 2014-10-21 13:17:34 +0200 (Tue, 21 Oct 2014) $
--- Modified By  :  $Author: u59323933 $
--------------------------------------------------------------------------------
--- Major Revisions:
--- Date        Version   Author    Description
--- 2014-06-05  1.0       michmueh  Created
--------------------------------------------------------------------------------
-
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
---library work;
---use work.aes128Pkg.all;
-
--------------------------------------------------------------------------------
---! @brief AES S-box implementation based on the approach by D. Canright [1].
---!
---! AES S-box implementation based on the approach by D. Canright, which uses
---! the subfields GF(2^2) and GF(2^4) in order to realize the field inversion
---! in GF(2^8). Thereby the area footprint of the resulting architecture should
---! be significantly smaller than the LUT-based approach using only a constant
---! array and shifting the effort of the actual implementation over to the
---! synthesizer.
---!
---! @reference{[1], D. Canright\, "A Very Compact S-Box for AES"\, CHES'05\,
---!            http://dx.doi.org/10.1007/11545262_32}
--------------------------------------------------------------------------------
 entity sbox is
   
   port (

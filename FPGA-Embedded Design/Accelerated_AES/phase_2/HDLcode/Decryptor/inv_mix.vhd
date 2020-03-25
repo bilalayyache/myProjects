@@ -1,35 +1,5 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 05.04.2018 10:38:25
--- Design Name: 
--- Module Name: inv_mix - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity inv_mix is
     Port ( s1,s2,s3,s4 : in STD_LOGIC_VECTOR (7 downto 0);
@@ -69,4 +39,4 @@ u12:mul_2 port map(x16,x17);
 x18<=x17 xor s4;
 
 d<=x5 xor x19 xor x14 xor x18;
-end behavioral;
+end Behavioral;
